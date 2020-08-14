@@ -1,0 +1,43 @@
+{
+    "docs": [
+        {
+            "_id": "5f328846d50133152c53005b",
+            "name": "San Francisco",
+            "createdAt": "2020-05-23T21:47:11.102Z",
+            "updatedAt": "2020-08-10T19:12:53.090Z"
+        },
+        {
+            "_id": "5f328846d50133152c530060",
+            "name": "Oakland",
+            "createdAt": "2020-05-07T18:19:45.316Z",
+            "updatedAt": "2020-08-10T23:06:46.206Z"
+        },
+        {
+            "_id": "5f328846d50133152c530061",
+            "name": "San Leandro",
+            "createdAt": "2020-04-19T10:55:36.695Z",
+            "updatedAt": "2020-08-11T05:28:37.575Z"
+        },
+        {
+            "_id": "5f328846d50133152c530064",
+            "name": "Barranquilla",
+            "createdAt": "2020-02-02T18:20:11.314Z",
+            "updatedAt": "2020-08-11T05:27:03.190Z"
+        },
+        {
+            "_id": "5f328846d50133152c53005d",
+            "name": "Chicago",
+            "createdAt": "2020-01-24T03:36:03.340Z",
+            "updatedAt": "2020-08-11T01:39:26.416Z"
+        }
+    ],
+    "totalDocs": 10,
+    "limit": 5,
+    "totalPages": 2,
+    "page": 1,
+    "pagingCounter": 1,
+    "hasPrevPage": false,
+    "hasNextPage": true,
+    "prevPage": null,
+    "nextPage": 2
+}
