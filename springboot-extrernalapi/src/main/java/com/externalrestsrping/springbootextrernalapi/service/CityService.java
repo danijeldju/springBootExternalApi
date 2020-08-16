@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.externalrestsrping.springbootextrernalapi.domain.City;
 import com.externalrestsrping.springbootextrernalapi.repository.CityRepository;
 
-
 @Service("cityService")
 public class CityService {
 
@@ -34,18 +33,18 @@ public class CityService {
 	public void save(List<City> cities) {
 		cityRepository.saveAll(cities);
 	}
-	
-	public  City save(City city) {
 
-		
+	public City save(City city) {
+
 		return cityRepository.save(city);
 	}
-	
-	public  City save(City city, String name) {
+
+	public City save(City city, String name) {
 
 		city.setName(name);
 		return cityRepository.save(city);
 	}
+
 	public void delete(Integer id) {
 		cityRepository.deleteById(id);
 	}

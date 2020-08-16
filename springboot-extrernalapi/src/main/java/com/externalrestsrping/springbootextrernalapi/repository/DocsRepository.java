@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.externalrestsrping.springbootextrernalapi.domain.Docs;
 
 @Repository("docsRepository")
-public interface DocsRepository  extends JpaRepository<Docs, Integer>{
+public interface DocsRepository extends JpaRepository<Docs, Integer> {
 
 }

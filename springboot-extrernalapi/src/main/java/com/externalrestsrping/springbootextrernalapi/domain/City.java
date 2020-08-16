@@ -20,7 +20,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @Table(name = "City")
@@ -28,46 +27,36 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @XmlRootElement
 public class City implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
 	@Id
-	//@PrimaryKeyJoinColumn
+	// @PrimaryKeyJoinColumn
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = false, nullable = false)
 	private Integer id;
-	
-	
-	
+
 //	@Basic(optional = true)
 //	
 //	@Column(name = "callingCodes", unique = false)
 ////	@OneToMany(mappedBy ="method" , cascade = CascadeType.ALL)
 //	@ElementCollection(targetClass=String.class) 
 //	private List<String> callingCodes;
-	
+
 	@Basic(optional = false)
 	@JsonManagedReference
 	@OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
 	private List<Docs> docs;
-	
-	
+
 	@Basic(optional = false)
 	@NotNull
 	@Size(min = 1, max = 255)
 	@Column(name = "capital", unique = true)
 	private String capital;
-	
+
 	@Basic(optional = false)
 	@NotNull
 	@Size(min = 1, max = 255)
 	@Column(name = "name", unique = true)
 	private String name;
-	
-	
-	
-	
-
-
 
 //	public List<String> getCallingCodes() {
 //		return callingCodes;
@@ -78,47 +67,36 @@ public class City implements Serializable {
 //		this.callingCodes = callingCodes;
 //	}
 
-
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
 	public String getCapital() {
 		return capital;
 	}
-
 
 	public void setCapital(String capital) {
 		this.capital = capital;
 	}
 
-
 	public Integer getId() {
 		return id;
 	}
-
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
 	public List<Docs> getDocs() {
 		return docs;
 	}
 
-
 	public void setDocs(List<Docs> docs) {
 		this.docs = docs;
 	}
-
-
-	
 
 }

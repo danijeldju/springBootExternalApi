@@ -11,8 +11,7 @@ import com.externalrestsrping.springbootextrernalapi.repository.DocsRepository;
 @Service("docsService")
 public class DocsService {
 
-	
-	@Autowired 
+	@Autowired
 	private DocsRepository docsRepository;
 
 	public DocsService(DocsRepository docsRepository) {
@@ -22,10 +21,11 @@ public class DocsService {
 	public List<Docs> findList() {
 		return docsRepository.findAll();
 	}
-	
-	public List<Docs> getAll(){
+
+	public List<Docs> getAll() {
 		return docsRepository.findAll();
 	}
+
 	public Iterable<Docs> list() {
 		return docsRepository.findAll();
 	}
